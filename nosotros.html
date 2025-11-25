@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - FerreClick</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">FerreClick</a></h1>
+            <div class="header-controls">
+                <form id="search-form-header-nosotros" class="search-form-header">
+                    <input type="search" id="search-input-header-nosotros" class="search-input-header" placeholder="Buscar productos...">
+                    <button type="submit" class="search-button-header">Buscar</button>
+                </form>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="products.html">Productos</a></li>
+                        <li><a href="nosotros.html" class="active">Nosotros</a></li> <!-- Added active class -->
+                        <li><a href="cotizar.html">Cotizar <span id="quote-icon-count" class="cart-count">0</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="about-us-content">
+            <h1>Sobre Nosotros</h1>
+            <p class="intro-text">
+                Somos tu ferretería de confianza, comprometidos con ofrecerte productos de calidad y el mejor servicio para todos tus proyectos de construcción, reparación y hogar. Desde nuestros inicios, nos hemos esforzado por ser más que una tienda: queremos ser tu aliado estratégico.
+            </p>
+        </section>
+    </main>
+
+    <section class="mission-vision-wrapper">
+        <div class="container"> <!-- Nested container for content width -->
+            <article class="mission-vision">
+                <h2>Nuestra Misión</h2>
+                <p>
+                    Facilitar la compra de productos de ferretería a través de una plataforma online intuitiva y eficiente, ofreciendo una vasta selección de artículos de calidad con entrega rápida y segura directamente a la puerta de su casa o proyecto.
+                </p>
+            </article>
+
+            <article class="mission-vision">
+                <h2>Nuestra Visión</h2>
+                <p>
+                    Convertirnos en la ferretería online de referencia en el país, liderando el mercado a través de la innovación tecnológica, una experiencia de compra sin igual y un catálogo en constante crecimiento para satisfacer todas las necesidades de nuestros clientes, sin importar dónde se encuentren.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Optional: Add more sections like "Nuestros Valores" or "Historia" here if needed, likely within the main .container or their own full-width wrappers -->
+
+    <footer>
+        <div class="container footer-content-wrapper">
+            <div class="footer-info">
+                <p>&copy; 2025 FerreClick. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <p><a href="libro-reclamaciones.html" class="footer-link-button">Libro de reclamaciones</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script> <!-- For quote count in header -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Producto - FerreClick</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">FerreClick</a></h1>
+            <div class="header-controls">
+                <form id="search-form-header-detail" class="search-form-header">
+                    <input type="search" id="search-input-header-detail" class="search-input-header" placeholder="Buscar productos...">
+                    <button type="submit" class="search-button-header">Buscar</button>
+                </form>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="products.html">Productos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="cotizar.html">Cotizar <span id="quote-icon-count" class="cart-count">0</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <nav aria-label="breadcrumb" class="breadcrumb-nav">
+            <ol>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li id="breadcrumb-product-name" aria-current="page">Detalle del Producto</li>
+            </ol>
+        </nav>
+        <article id="product-detail-content">
+            <!-- El detalle del producto se cargará aquí por JS -->
+            <div class="product-image-container">
+                 <img src="images/placeholder.png" alt="Producto" onerror="this.onerror=null;this.src='images/placeholder.png';">
+            </div>
+            <div class="product-info-container">
+                <h2>Nombre del Producto</h2>
+                <p class="price-detail">Precio: S/0.00</p>
+                <p>Descripción detallada del producto...</p>
+                 <p><strong>Categoría:</strong> <span id="product-category-detail">N/A</span></p>
+                <div class="add-to-cart-controls">
+                    <label for="quantity" class="sr-only">Cantidad:</label> <!-- Label hidden as prompt is used now -->
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" style="display:none;"> <!-- Hidden as prompt is used -->
+                    <button id="add-to-cart-btn-detail" class="btn">Añadir a Cotización</button>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div class="container footer-content-wrapper">
+            <div class="footer-info">
+                <p>&copy; 2025 FerreClick. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <p><a href="libro-reclamaciones.html" class="footer-link-button">Libro de reclamaciones</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Quantity Modal Structure -->
+    <div id="quantity-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <h3 id="modal-product-name">Product Name</h3>
+            <p>Ingrese la cantidad que desea cotizar:</p>
+            <input type="number" id="modal-quantity-input" value="1" min="1">
+            <div class="modal-buttons">
+                <button id="modal-cancel-btn" class="btn btn-secondary">Cancelar</button>
+                <button id="modal-confirm-btn" class="btn">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Reclamaciones - FerreClick</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">FerreClick</a></h1>
+            <div class="header-controls">
+                <form id="search-form-header-reclamaciones" class="search-form-header">
+                    <input type="search" id="search-input-header-reclamaciones" class="search-input-header" placeholder="Buscar productos...">
+                    <button type="submit" class="search-button-header">Buscar</button>
+                </form>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="products.html">Productos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="cotizar.html">Cotizar <span id="quote-icon-count" class="cart-count">0</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="reclamaciones-content">
+            <h1>Libro de Reclamaciones</h1>
+            <p class="intro-text">
+                Conforme a lo establecido en el Código de Protección y Defensa del Consumidor, esta institución cuenta con un Libro de Reclamaciones a su disposición.
+                Por favor, complete los siguientes campos para registrar su reclamo o queja.
+            </p>
+
+            <form id="reclamaciones-form">
+                <fieldset>
+                    <legend>1. Identificación del Consumidor Reclamante</legend>
+                    <div>
+                        <label for="reclamante-nombre">Nombres y Apellidos:</label>
+                        <input type="text" id="reclamante-nombre" name="reclamante-nombre" required>
+                    </div>
+                    <div>
+                        <label for="reclamante-documento">DNI / CE:</label>
+                        <input type="text" id="reclamante-documento" name="reclamante-documento" required>
+                    </div>
+                    <div>
+                        <label for="reclamante-domicilio">Domicilio:</label>
+                        <input type="text" id="reclamante-domicilio" name="reclamante-domicilio" required>
+                    </div>
+                    <div>
+                        <label for="reclamante-telefono">Teléfono:</label>
+                        <input type="tel" id="reclamante-telefono" name="reclamante-telefono">
+                    </div>
+                    <div>
+                        <label for="reclamante-email">Correo Electrónico:</label>
+                        <input type="email" id="reclamante-email" name="reclamante-email" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Identificación del Bien Contratado</legend>
+                    <div>
+                        <label for="bien-tipo">Tipo:</label>
+                        <select id="bien-tipo" name="bien-tipo">
+                            <option value="producto">Producto</option>
+                            <option value="servicio">Servicio</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="bien-monto">Monto Reclamado (S/.):</label>
+                        <input type="number" id="bien-monto" name="bien-monto" step="0.01" min="0">
+                    </div>
+                    <div>
+                        <label for="bien-descripcion">Descripción (Producto/Servicio):</label>
+                        <textarea id="bien-descripcion" name="bien-descripcion" rows="3"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Detalle de la Reclamación y Pedido del Consumidor</legend>
+                    <div>
+                        <label for="reclamo-tipo">Tipo de Reclamación:</label>
+                        <select id="reclamo-tipo" name="reclamo-tipo">
+                            <option value="reclamo">Reclamo</option>
+                            <option value="queja">Queja</option>
+                        </select>
+                        <p class="field-description">
+                            <strong>Reclamo:</strong> Disconformidad relacionada a los productos o servicios.
+                            <br>
+                            <strong>Queja:</strong> Disconformidad no relacionada a los productos o servicios; o malestar o descontento respecto a la atención al público.
+                        </p>
+                    </div>
+                    <div>
+                        <label for="reclamo-detalle">Detalle del Reclamo/Queja:</label>
+                        <textarea id="reclamo-detalle" name="reclamo-detalle" rows="5" required></textarea>
+                    </div>
+                    <div>
+                        <label for="reclamo-pedido">Pedido del Consumidor:</label>
+                        <textarea id="reclamo-pedido" name="reclamo-pedido" rows="3" required></textarea>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn">Enviar Reclamo</button>
+                </div>
+            </form>
+            <div id="reclamacion-confirmacion" class="confirmation-message" style="display:none;">
+                <h3>Reclamo Enviado Exitosamente</h3>
+                <p>Hemos recibido su reclamo/queja. Nos pondremos en contacto con usted a la brevedad a través del correo electrónico proporcionado.</p>
+                <p>Recuerde que, según la normativa, tenemos un plazo máximo de 15 días hábiles para darle una respuesta.</p>
+                <a href="index.html" class="btn">Volver al Inicio</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content-wrapper">
+            <div class="footer-info">
+                <p>&copy; 2025 FerreClick. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <p><a href="libro-reclamaciones.html" class="footer-link-button">Libro de reclamaciones</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script>
+    <script src="js/reclamaciones.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

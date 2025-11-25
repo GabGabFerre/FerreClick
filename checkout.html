@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Cotización - FerreClick</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">FerreClick</a></h1>
+            <div class="header-controls">
+                <form id="search-form-header-checkout" class="search-form-header">
+                    <input type="search" id="search-input-header-checkout" class="search-input-header" placeholder="Buscar productos...">
+                    <button type="submit" class="search-button-header">Buscar</button>
+                </form>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="products.html">Productos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="cotizar.html">Cotizar <span id="quote-icon-count" class="cart-count">0</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <h2>Finalizar Solicitud de Cotización</h2>
+        <div id="checkout-layout">
+            <section id="checkout-form-container">
+                <form id="checkout-form">
+                    <fieldset>
+                        <legend>Información de Envío</legend>
+                        <div>
+                            <label for="ferreteria-name">Ferretería:</label>
+                            <input type="text" id="ferreteria-name" name="ferreteria-name" required>
+                        </div>
+                        <div>
+                            <label for="name">Nombre Completo (Contacto):</label> <!-- Clarified label -->
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div>
+                            <label for="city">Provincia:</label>
+                            <select id="city" name="city" required>
+                                <option value="">Seleccione una ciudad</option>
+                                <option value="Arequipa">Arequipa</option>
+                                <option value="Camaná">Camaná</option>
+                                <option value="Islay">Islay</option>
+                                <option value="Joya">Joya</option>
+                                <option value="Pedregal">Pedregal</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="postal-code">Distrito:</label>
+                            <select id="postal-code" name="postal-code" required disabled>
+                                <option value="">Seleccione una ciudad primero</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="address">Dirección:</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                         <div>
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Información Adicional (Opcional)</legend>
+                        <div>
+                            <label for="comments">Comentarios adicionales:</label>
+                            <textarea id="comments" name="comments" rows="4"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" id="submit-quote-request-btn" class="btn btn-primary btn-lg">Terminar cotización</button>
+                </form>
+            </section>
+            <section id="checkout-summary-container"> <!-- ID can remain, or change to quote-summary-container -->
+                <h3>Resumen de tu Solicitud</h3>
+                <div id="checkout-cart-summary"> <!-- ID can remain, or change to quote-items-summary -->
+                    <!-- El resumen de la cotización se cargará aquí por JS -->
+                    <p>Cargando resumen de cotización...</p>
+                </div>
+            </section>
+        </div>
+
+        <section id="confirmation-message" style="display:none;" class="text-center mt-2">
+            <h3>¡Solicitud Enviada!</h3>
+            <p>Tu solicitud de cotización ha sido enviada exitosamente. Nos pondremos en contacto contigo a la brevedad.</p>
+            <a href="index.html" class="btn">Volver al Inicio</a>
+        </section>
+    </main>
+    <footer>
+        <div class="container footer-content-wrapper">
+            <div class="footer-info">
+                <p>&copy; 2025 FerreClick. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <p><a href="libro-reclamaciones.html" class="footer-link-button">Libro de reclamaciones</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - FerreClick</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">FerreClick</a></h1>
+            <div class="header-controls">
+                <form id="search-form-header-products" class="search-form-header">
+                    <input type="search" id="search-input-header-products" class="search-input-header" placeholder="Buscar productos...">
+                    <button type="submit" class="search-button-header">Buscar</button>
+                </form>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="products.html">Productos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="cotizar.html">Cotizar <span id="quote-icon-count" class="cart-count">0</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="products-page-layout">
+            <aside id="filters">
+                <h3>Categorías</h3>
+                <ul id="category-list">
+                    <!-- Las categorías se cargarán aquí por JS -->
+                </ul>
+            </aside>
+            <section id="product-grid-container">
+                <h2 id="product-list-title">Todos los Productos</h2>
+                <div id="product-grid">
+                    <!-- Los productos se cargarán aquí por JS -->
+                </div>
+                <p id="no-results-message" class="no-results-message" style="display: none;">No se encontraron productos que coincidan con tu búsqueda o filtro.</p>
+                <div id="pagination-controls" class="pagination-controls-container">
+                    <!-- Los controles de paginación se insertarán aquí por JS -->
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container footer-content-wrapper">
+            <div class="footer-info">
+                <p>&copy; 2025 FerreClick. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <p><a href="libro-reclamaciones.html" class="footer-link-button">Libro de reclamaciones</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script> <!-- cart.js for quote count update in header & add to quote -->
+    <script src="js/main.js"></script>
+
+    <!-- Quantity Modal Structure -->
+    <div id="quantity-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <h3 id="modal-product-name">Product Name</h3>
+            <p>Ingrese la cantidad que desea cotizar:</p>
+            <input type="number" id="modal-quantity-input" value="1" min="1">
+            <div class="modal-buttons">
+                <button id="modal-cancel-btn" class="btn btn-secondary">Cancelar</button>
+                <button id="modal-confirm-btn" class="btn">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

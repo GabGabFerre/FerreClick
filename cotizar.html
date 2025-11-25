@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizar - FerreClick</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">FerreClick</a></h1>
+            <div class="header-controls">
+                <form id="search-form-header-quote" class="search-form-header"> <!-- ID updated -->
+                    <input type="search" id="search-input-header-quote" class="search-input-header" placeholder="Buscar productos..."> <!-- ID updated -->
+                    <button type="submit" class="search-button-header">Buscar</button>
+                </form>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="products.html">Productos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="cotizar.html">Cotizar <span id="quote-icon-count" class="cart-count">0</span></a></li> <!-- Link and ID updated -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="quote-page-instructions">
+            <p>Usted podrá cotizar sus productos aquí, una vez procesada la solicitud se le enviará un mensaje por WhatsApp indicando los productos disponibles según el stock del almacén.</p>
+        </div>
+        <h2>Tu Solicitud de Cotización</h2>
+        <div id="quote-page-layout" class="quote-layout-columns">
+            <section id="quote-items-container">
+                 <p class="empty-quote-message" style="display: none;">Tu solicitud de cotización está vacía. <a href="products.html">Sigue añadiendo productos</a>.</p>
+                <div id="quote-items">
+                    <!-- Los items de la cotización se cargarán aquí por JS -->
+                </div>
+            </section>
+            <aside id="quote-summary-container" style="display: none;"> <!-- Changed to aside for semantics, ensure CSS targets appropriately -->
+                <div id="quote-summary">
+                    <h3>Resumen de Cotización</h3>
+                    <p>Subtotal (referencial): <span id="quote-subtotal">S/0.00</span></p>
+                    <hr>
+                    <p><strong>Total (referencial): <span id="quote-total">S/0.00</span></strong></p>
+                    <button id="request-quote-btn" class="btn">Solicitar Cotización</button>
+                    <div class="quote-notes">
+                        <p class="espera-nota">Tiempo de espera aproximado: de 5 a 20 minutos.</p>
+                        <h4>Medios de pago:</h4>
+                        <ul>
+                            <li>Transferencia por BCP</li>
+                            <li>Pago por Yape</li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <div class="container footer-content-wrapper">
+            <div class="footer-info">
+                <p>&copy; 2025 FerreClick. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <p><a href="libro-reclamaciones.html" class="footer-link-button">Libro de reclamaciones</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

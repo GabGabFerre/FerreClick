@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FerreClick - Inicio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">FerreClick</a></h1>
+            <div class="header-controls">
+                <form id="search-form-header-index" class="search-form-header">
+                    <input type="search" id="search-input-header-index" class="search-input-header" placeholder="Buscar productos...">
+                    <button type="submit" class="search-button-header">Buscar</button>
+                </form>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="products.html">Productos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="cotizar.html">Cotizar <span id="quote-icon-count" class="cart-count">0</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero"> <!-- Hero section moved out of main.container -->
+        <div class="container"> <!-- Nested container for hero content -->
+            <h2>Tu Ferretería de Confianza</h2>
+            <p>Encuentra todo lo que necesitas para tus proyectos, desde herramientas hasta artículos de limpieza.</p>
+            <a href="products.html" class="btn btn-primary">Ver Productos</a>
+        </div>
+    </section>
+
+    <main class="container"> <!-- Main content continues within a container -->
+        <section class="featured-categories">
+            <h3>Categorías Destacadas</h3>
+            <div class="category-tiles">
+                <a href="products.html#Tubos%20y%20accesorios" class="category-tile">
+                    <img src="images/00a_cat_tubos.png" alt="Tubos y accesorios" onerror="this.onerror=null;this.src='images/placeholder_cat.png';">
+                    <h4>Tubos y accesorios</h4>
+                </a>
+                <a href="products.html#Herramientas" class="category-tile">
+                    <img src="images/00a_cat_herramientas.png" alt="Herramientas" onerror="this.onerror=null;this.src='images/placeholder_cat.png';">
+                    <h4>Herramientas</h4>
+                </a>
+                <a href="products.html#Electricidad" class="category-tile">
+                    <img src="images/00a_cat_electricidad.png" alt="Electricidad" onerror="this.onerror=null;this.src='images/placeholder_cat.png';">
+                    <h4>Electricidad</h4>
+                </a>
+                <a href="products.html#Válvulas" class="category-tile">
+                    <img src="images/00a_cat_valvulas.png" alt="Válvulas" onerror="this.onerror=null;this.src='images/placeholder_cat.png';">
+                    <h4>Válvulas</h4>
+                </a>
+            </div>
+        </section>
+
+        <section class="shipping-zones">
+            <h2>Nuestras Zonas de Envío</h2>
+            <div class="zone-tiles">
+                <div class="zone-tile">
+                    <img src="images/00a_reparto.png" alt="Arequipa" onerror="this.onerror=null;this.src='images/placeholder_zone.png';">
+                    <h4>Arequipa</h4>
+                    <p>De lunes a sábado</p>
+                </div>
+                <div class="zone-tile">
+                    <img src="images/00a_reparto.png" alt="Joya" onerror="this.onerror=null;this.src='images/placeholder_zone.png';">
+                    <h4>Joya</h4>
+                    <p>Entregas los martes</p>
+                </div>
+                <div class="zone-tile">
+                    <img src="images/00a_reparto.png" alt="Mollendo" onerror="this.onerror=null;this.src='images/placeholder_zone.png';">
+                    <h4>Mollendo</h4>
+                    <p>Entregas los jueves o viernes</p>
+                </div>
+                <div class="zone-tile">
+                    <img src="images/00a_reparto.png" alt="Camaná" onerror="this.onerror=null;this.src='images/placeholder_zone.png';">
+                    <h4>Camaná</h4>
+                    <p>Entregas los jueves o viernes</p>
+                </div>
+                <div class="zone-tile">
+                    <img src="images/00a_reparto.png" alt="Pedregal" onerror="this.onerror=null;this.src='images/placeholder_zone.png';">
+                    <h4>Pedregal</h4>
+                    <p>Entregas los lunes</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container footer-content-wrapper">
+            <div class="footer-info">
+                <p>&copy; 2025 FerreClick. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <p><a href="libro-reclamaciones.html" class="footer-link-button">Libro de reclamaciones</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script> <!-- cart.js for quote count update -->
+    <script src="js/main.js"></script>
+
+    <!-- Quantity Modal Structure -->
+    <div id="quantity-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <h3 id="modal-product-name">Product Name</h3>
+            <p>Ingrese la cantidad que desea cotizar:</p>
+            <input type="number" id="modal-quantity-input" value="1" min="1">
+            <div class="modal-buttons">
+                <button id="modal-cancel-btn" class="btn btn-secondary">Cancelar</button>
+                <button id="modal-confirm-btn" class="btn">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

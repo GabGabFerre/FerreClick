@@ -1,0 +1,53 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "com.example.app",
+    "productName": "FClick",
+    "files": [
+      "main.js",
+      "index.html",
+      "product-detail.html",
+      "products.html",
+      "checkout.html",
+      "cotizar.html",
+      "exportar-cotizacion.html",
+      "libro-reclamaciones.html",
+      "nosotros.html",
+      "css/",
+      "js/",
+      "images/",
+      "build/"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "images/icono.png"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabGabFerre/FClick.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/GabGabFerre/FClick/issues"
+  },
+  "homepage": "https://github.com/GabGabFerre/FClick#readme",
+  "devDependencies": {
+    "electron": "^29.1.0",
+    "electron-builder": "^24.9.1"
+  }
+}
